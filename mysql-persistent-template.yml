@@ -97,6 +97,7 @@ objects:
     resources:
       requests:
         storage: ${VOLUME_CAPACITY}
+    storageClassName: ibmc-vpc-block-general-purpose
 - apiVersion: v1
   kind: DeploymentConfig
   metadata:
@@ -197,27 +198,24 @@ parameters:
   value: mysql
 - description: Username for MySQL user that will be used for accessing the database.
   displayName: MySQL Connection Username
-  from: user[A-Z0-9]{3}
-  generate: expression
+  value: user
   name: MYSQL_USER
   required: true
 - description: Password for the MySQL connection user.
   displayName: MySQL Connection Password
-  from: '[a-zA-Z0-9]{16}'
-  generate: expression
+  value: 123-mysql
   name: MYSQL_PASSWORD
   required: true
 - description: Password for the MySQL root user.
   displayName: MySQL root user Password
-  from: '[a-zA-Z0-9]{16}'
-  generate: expression
+  value: 321-mysql
   name: MYSQL_ROOT_PASSWORD
   required: true
 - description: Name of the MySQL database accessed.
   displayName: MySQL Database Name
   name: MYSQL_DATABASE
   required: true
-  value: sampledb
+  value: db
 - description: Volume space available for data, e.g. 512Mi, 2Gi.
   displayName: Volume Capacity
   name: VOLUME_CAPACITY
