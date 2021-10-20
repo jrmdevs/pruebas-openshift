@@ -97,7 +97,7 @@ objects:
     resources:
       requests:
         storage: ${VOLUME_CAPACITY}
-    storageClassName: ibmc-vpc-block-general-purpose
+    #storageClassName: ibmc-vpc-block-general-purpose
 - apiVersion: v1
   kind: DeploymentConfig
   metadata:
