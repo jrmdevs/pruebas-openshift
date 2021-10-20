@@ -11,7 +11,7 @@ spec:
     path: /tmp
     server: 172.17.0.2
   # persistentVolumeReclaimPolicy: Delete
-  storageClassName: ibmc-vpc-block-general-purpose
+  # storageClassName: ibmc-vpc-block-general-purpose
   volumeMode: Filesystem
   claimRef:
     namespace: prueba-mysql
