@@ -12,9 +12,8 @@ spec:
     kind: PersistentVolumeClaim
     name: mysql
     namespace: prueba-mysql
-  hostPath:
-    path: /mnt/pv-data/pv-mysql
-    type: ""
+  nfs:
+    server: 172.17.0.2
+    path: /var/lib/mysql/data
   persistentVolumeReclaimPolicy: Delete
-  storageClassName: manual
   volumeMode: Filesystem

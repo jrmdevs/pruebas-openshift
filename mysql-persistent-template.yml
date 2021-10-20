@@ -97,7 +97,6 @@ objects:
     resources:
       requests:
         storage: ${VOLUME_CAPACITY}
-    storageClassName: manual
 - apiVersion: v1
   kind: DeploymentConfig
   metadata:
