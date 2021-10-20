@@ -5,8 +5,6 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
-  - ReadWriteMany
-  - ReadOnlyMany
   capacity:
     storage: 10Gi
   claimRef:
@@ -18,4 +16,5 @@ spec:
     path: /mnt/pv-data/pv-mysql
     type: ""
   persistentVolumeReclaimPolicy: Delete
+  storageClassName: manual
   volumeMode: Filesystem
